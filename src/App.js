@@ -42,7 +42,7 @@ function App() {
     const transformed = {};
     selectedProperties.forEach(prop => {
       transformed[prop.value] = {
-        "$in": jsonData.map(item => item[prop.value])
+        "$in": [...new Set(jsonData.map(item => item[prop.value]))]
       };
     });
     const finalTransformed = { user_id: transformed };
