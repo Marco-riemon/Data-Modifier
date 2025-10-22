@@ -2,7 +2,6 @@ import React, { useState, useMemo } from 'react';
 import Select from 'react-select';
 import { useTable } from 'react-table';
 import './App.css';
-import _ from 'lodash';
 
 function App() {
   const [jsonData, setJsonData] = useState([]);
